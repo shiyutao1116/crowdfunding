@@ -1,0 +1,28 @@
+server:
+  port: 7000
+spring:
+  application:
+    name: atguigu-crowd-pay
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+  redis:
+    host: 192.168.15.129
+  session:
+    store-type: redis
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1000/eureka
+
+ali:
+  pay:
+    alipay-public-key: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtUR22fkPaGOaSgH7KPvXeuBH2YHtgYC4qnMDz72Cv5TE7GWE8GtBvHPTvqrBpnCRMpn7kdSPpAK3YkCb8Ff5JwzJfuRFi2trtES/7Aqk689VUsMYEhNwxc0ZDJ7oYehqdHZ7dBM5GrUHAFeTYeQmMf425yqHSsz4LZ3NRDUK8o2AonPrbl9KHxiF/23PfA3ZjOY6gBkV20MrIqEYtVdczarvWYjuOzd5PFXkbhLyXUdh0jOsIPTrM/K3SBMnE1PeACaHTI05tzgvqHsu1+MIUKajF0MyWmry43gGCYUUiWAq2hmBgu5SBwyii8SAnQnC2EvYVXFhTsmCylY0ZrIYowIDAQAB
+    app-id: 2021000119608304
+    charset: utf-8
+    gateway-url: https://openapi.alipaydev.com/gateway.do
+    merchant-private-key: MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCGAKFTYvxrpzsdwaoReEsLsBOze+mtuKYvz6XvQN/BDE6iLJwV/FSR+CPvyML46EwhCJE65DzOD8VjYC0aOE0Q1sX1N9IN5X3XyCOBUK/pRtRzAesSIoCWO9FM8y9w+xcAlzOn5S5dVixR4XUYSQie6TsmtvjRttpL/Vcvy922ru5HVc+z199fZXC4l+sTx5V+kNGMLcSZHkgXKVgO7lL6vZxpMTsrv2UTxHHXmgwB0ZlZ7nN2ymqN9nHb+y+aRptMB4rbfhle1l6i66mK4nr/m7dqGgDglPSp2xgMyRAKo0hEKPQhrMJKQMNcwu9kvIlnH0Yv8uQpPR71ztYR8W+vAgMBAAECggEAIRGUvkxGOJbbWtuJCaii9G5uXjOtFibkNBZNP77FuRE9cn4Jws8zW5Zd3/WuT9ibuOcxV9QtQTjZIE4Cs17Dfe1SitJMrws8Q/zq7iWoU6wcD4mgpigHjYuTeiblRT9hjM7De6JuD7CNXWODDwwu6XBrHYG346D5PBl3456uxz8F4nXsQ+GjOtG5YrPj8P8rAaweEloJsCgsHPV40LWYesGNns00ONdp5SEyyZE8sguruU37EuoqwUo13oOHeS5ABOZr378D8Ale33RrD4vcdEYeKc4ZUB1kkDgVDifgraFLBHI4tvSPve3QE32ksJzNPtsY9bUisD5/RYhspoGxqQKBgQDUIUCqNXCNLb1fZgWTXC5wT2Yvfb/5VEpNk0yhkWy0ybqzolZQA2sp6fHVj5GQoW17jmaEAAF4rIEDzNYwkWzq7QNgNfQFml97J/aMEnh9CQIiQfWLkdRjNLLJ+X3aOaeTyy+3mFI4/p24o5DcwymEH+t+uxbW5Izf6GtzjorOQwKBgQChtxf//5GM+Z+ET/iqfO9NN8qSYN0iLpc5Icb/zn78w2Vj84bmD1dOWuwcsFAutoKTInvJ518qdiva2u9F997QeD2QyZ107JHg0uXhLchAuiwSXT56n2uy8Rpa/Omw+Pux2V4UXDCIBXmBxHRQS9pxUMHox4AgnvkpYdL5rg3gJQKBgB6ufJLhzditn/FXaUEKGTFnWolN7+FZHrIftvq7dPSlJNrshP1nsS1LyA2yiURZBOPVEeDPu2a/1J0/GE/ICO/lvhJBW30f+eVvP0q9NS4oimV4EtLQEd8TdTSfYGOa6TEIN2ufnWze7uMQzVgQ5kVU9JPM7Z3BStrr2/bHzC3PAoGAGAiqHHXTH+yJdJSeFFh1CDjedlrHAqmB+A+5D5OU8+PmUbCDv/VPuGly5eCeShL93PgnBZ7JWfouElyvauqnxrvYCoisShBOrecqGwk+1b/VhPUur/K5guKqVBN6d77JSWlQvh3laJHHuS2FS9m6IVUrPHlJ5Y864JeVT1462bECgYA/cuQPUDEkYEceJD2Za9Gp1L/oGi7k1F0NDpdpeo2BB8J/h2oDsLZLfdjGjq7yej1MwvkszhmmCVUbQaxwmPii1ouhDC8KI30AkXFHKs5S+NwI9W8sHhgXnhZZYrYhyH5zz3drdQGPRGLEE5LfN4VEYPGKLpPLULtDMvZBYw+ctg==
+    notify-url: http://j9syus.natappfree.cc/pay/notify
+    return-url: http://localhost/pay/return
+    sign-type: RSA2

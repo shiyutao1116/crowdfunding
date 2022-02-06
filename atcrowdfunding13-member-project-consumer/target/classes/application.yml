@@ -1,0 +1,24 @@
+server:
+  port: 5000
+spring:
+  application:
+    name: atguigu-crowd-project
+  redis:
+    host: 192.168.15.129
+  session:
+    store-type: redis
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1000/eureka/
+
+aliyun:
+  oss:
+    access-key-id: LTAI5t6LcQnkN1eoDnEKHDcE
+    access-key-secret: khBA8fYxarJ7EvyEeRbExxk6m4RGYP
+    bucket-domain: http://shiyutao.oss-cn-shanghai.aliyuncs.com
+    bucket-name: shiyutao
+    end-point: http://oss-cn-shanghai.aliyuncs.com
